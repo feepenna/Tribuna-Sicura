@@ -1,18 +1,3 @@
----
-description: Agente de desenvolvimento e orquestração do Tribuna §icura, com foco em Kotlin, segurança de documentos jurídicos, arquitetura sustentável e validação por testes.
-tools:
-  [
-    "vscode",
-    "execute",
-    "read",
-    "edit",
-    "search",
-    "web",
-    "agent",
-    "todo",
-  ]
----
-
 # AGENTS.md — Tribuna §icura
 
 ## 1. Identidade e responsabilidade do agente
@@ -39,7 +24,7 @@ Não transforme uma solicitação simples em uma reestruturação ampla. Não re
 Use esta ordem para compreender o projeto:
 
 1. Código e configuração atuais do repositório.
-2. Requisitos e documentação existentes, incluindo `project-overview.md` e `domain-model.md`, caso estejam presentes.
+2. Requisitos e documentação existentes: `docs/product-overview.md`, `docs/domain-model.md` e as specs em `openspec/` (`openspec/specs/` para o que já foi aceito, `openspec/changes/` para mudanças em andamento).
 3. Instruções deste arquivo.
 4. Decisões explicitamente confirmadas pelo usuário.
 5. Inferências técnicas, sempre identificadas como propostas a validar.
@@ -93,13 +78,22 @@ Não implemente como parte do MVP, salvo solicitação explícita:
 
 ## 5. Fluxo de trabalho para qualquer alteração
 
+### Mudanças guiadas por especificação (OpenSpec)
+
+Mudanças de comportamento são planejadas com OpenSpec antes da implementação:
+
+- Cada mudança vive em `openspec/changes/<nn>-<nome>/` com `proposal.md`, `design.md`, `tasks.md` e specs delta em `specs/`.
+- Ao concluir e validar uma mudança, arquive-a (`openspec/changes/archive/`) e sincronize as specs aceitas em `openspec/specs/`.
+- Os comandos e skills em `.opencode/` (`opsx-propose`, `opsx-apply`, `opsx-archive` etc.) automatizam esse fluxo.
+- Artefatos do OpenSpec são escritos em pt-BR, mantendo títulos estruturais e as palavras-chave SHALL/MUST em inglês (ver `openspec/config.yaml`).
+
 ### Fase A — Inspeção
 
 Antes de editar:
 
 - Leia os arquivos relevantes e identifique os pontos de entrada e dependências.
 - Verifique a estrutura real do projeto, os módulos Kotlin e o sistema de build.
-- Inspecione `settings.gradle.kts`, `build.gradle.kts`, `gradle/libs.versions.toml`, `gradle.properties` e wrappers quando existirem.
+- Inspecione `pom.xml` (Maven) quando existir.
 - Confirme as versões de Kotlin, JDK, plugins e frameworks nos arquivos do projeto.
 - Procure implementações semelhantes, testes existentes, interfaces públicas e convenções de nomes.
 - Identifique impactos sobre autenticação, autorização, persistência, criptografia, auditoria e compatibilidade.
@@ -127,14 +121,14 @@ Pergunte ao usuário apenas quando a informação ausente for necessária para e
 - Não substitua código real por pseudocódigo, stubs ou valores fixos para aparentar conclusão.
 - Não silencie exceções nem remova validações apenas para fazer testes passarem.
 - Não altere arquivos gerados manualmente quando houver uma fonte geradora.
-- Não invente comandos de build, scripts, tarefas Gradle ou ferramentas que não existam no repositório.
+- Não invente comandos de build, scripts, tarefas Maven ou ferramentas que não existam no repositório.
 
 ### Fase D — Validação
 
 Após implementar:
 
 - Execute os testes relevantes e, quando viável, a suíte completa.
-- Execute o build ou as verificações Gradle disponíveis, respeitando o sistema de build encontrado.
+- Execute o build ou as verificações Maven disponíveis, respeitando o sistema de build encontrado.
 - Confira formatação, análise estática e avisos pertinentes, se houver ferramentas configuradas.
 - Revise o diff para detectar alterações acidentais, segredos, logs sensíveis ou mudanças fora do escopo.
 - Se algo não puder ser executado, informe exatamente o que ficou sem validação e por quê.
@@ -278,8 +272,8 @@ Não escreva testes que dependam de serviços externos reais quando o projeto j�
 ## 11. Dependências, ferramentas e comandos
 
 - Verifique primeiro os comandos disponíveis nos arquivos de build e na documentação do repositório.
-- Use o Gradle Wrapper do projeto, se existir, em vez de depender de uma instalação global.
-- Não atualize Kotlin, JDK, Gradle ou frameworks como parte de uma tarefa não relacionada sem explicar a necessidade e o impacto.
+- Use o Maven Wrapper do projeto (`./mvnw`), se existir, em vez de depender de uma instalação global.
+- Não atualize Kotlin, JDK, Maven ou frameworks como parte de uma tarefa não relacionada sem explicar a necessidade e o impacto.
 - Antes de adicionar uma biblioteca, verifique se a funcionalidade já existe no projeto ou pode ser atendida pelas dependências atuais.
 - Avalie manutenção, compatibilidade, superfície de ataque e licença das novas dependências.
 - Não invente ferramentas especializadas ou agentes disponíveis. Delegue apenas quando o ambiente realmente oferecer esse recurso.
