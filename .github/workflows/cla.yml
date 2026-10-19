@@ -22,11 +22,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path-to-document: https://github.com/feepenna/Trubuna-Sicura/blob/main/CLA.md
+          path-to-document: https://github.com/feepenna/Tribuna-Sicura/blob/main/CLA.md
           # Assinaturas ficam numa branch própria para não poluir main nem esbarrar em branch protection
           branch: cla-signatures
           path-to-signatures: signatures/v1/cla.json
           allowlist: feepenna,dependabot[bot],github-actions[bot]
           custom-notsigned-prcomment: |
-            Obrigado pela contribuição! Antes de aceitarmos o seu pull request, pedimos que você leia e assine o nosso [Contrato de Licença de Contribuidor (CLA)](https://github.com/feepenna/Trubuna-Sicura/blob/main/CLA.md). Para assinar, comente neste PR exatamente a frase abaixo:
+            Obrigado pela contribuição! Antes de aceitarmos o seu pull request, pedimos que você leia e assine o nosso [Contrato de Licença de Contribuidor (CLA)](https://github.com/feepenna/Tribuna-Sicura/blob/main/CLA.md). Para assinar, comente neste PR exatamente a frase abaixo:
           custom-allsigned-prcomment: Todos os contribuidores assinaram o CLA. ✅
