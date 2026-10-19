@@ -39,6 +39,8 @@ O escopo completo do MVP e o que fica fora dele estão em [docs/product-overview
 ├── AGENTS.md                 # regras para agentes de IA (segurança, fluxo, Kotlin)
 ├── CLAUDE.md                 # aponta para AGENTS.md
 ├── LICENSE                   # AGPL-3.0
+├── CONTRIBUTING.md           # como contribuir
+├── CLA.md                    # contrato de licença de contribuidor
 ├── docs/
 │   ├── product-overview.md   # visão do produto, MVP, fluxo principal, decisões a validar
 │   └── domain-model.md       # entidades, relações, invariantes e casos de uso
@@ -46,6 +48,7 @@ O escopo completo do MVP e o que fica fora dele estão em [docs/product-overview
 │   ├── config.yaml           # contexto e regras do OpenSpec
 │   ├── specs/                # especificações aceitas (fonte de verdade do comportamento)
 │   └── changes/              # mudanças em andamento; concluídas vão para changes/archive/
+├── .github/workflows/        # CI (verificação do CLA)
 ├── .opencode/                # comandos e skills do fluxo OpenSpec (opsx-*)
 └── src/
     ├── main/kotlin/org/example/domain/   # model, port, usecase
@@ -70,3 +73,7 @@ Copyright (C) 2026 Felipe Penna
 Este projeto é distribuído sob a [GNU Affero General Public License v3.0](LICENSE) (AGPL-3.0). Você pode usar, estudar, modificar e redistribuir o código, desde que versões modificadas — inclusive as oferecidas como serviço pela rede — também sejam disponibilizadas sob a AGPL-3.0, com o código-fonte correspondente.
 
 Para uso sob outros termos (por exemplo, integrar a um produto fechado sem as obrigações da AGPL), entre em contato para uma licença comercial.
+
+## Contribuindo
+
+Contribuições são bem-vindas e exigem a assinatura do [CLA](CLA.md). Veja [CONTRIBUTING.md](CONTRIBUTING.md).
