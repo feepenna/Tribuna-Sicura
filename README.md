@@ -38,6 +38,7 @@ O escopo completo do MVP e o que fica fora dele estão em [docs/product-overview
 ├── README.md                 # este arquivo
 ├── AGENTS.md                 # regras para agentes de IA (segurança, fluxo, Kotlin)
 ├── CLAUDE.md                 # aponta para AGENTS.md
+├── LICENSE                   # AGPL-3.0
 ├── docs/
 │   ├── product-overview.md   # visão do produto, MVP, fluxo principal, decisões a validar
 │   └── domain-model.md       # entidades, relações, invariantes e casos de uso
@@ -61,3 +62,11 @@ O escopo completo do MVP e o que fica fora dele estão em [docs/product-overview
 ## Princípios
 
 Confidencialidade, integridade, autorização explícita, isolamento entre organizações e auditabilidade. Segredos criptográficos nunca vão para o cliente, para logs ou para dentro do PDF. Detalhes em [AGENTS.md §8](AGENTS.md).
+
+## Licença
+
+Copyright (C) 2026 Felipe Penna
+
+Este projeto é distribuído sob a [GNU Affero General Public License v3.0](LICENSE) (AGPL-3.0). Você pode usar, estudar, modificar e redistribuir o código, desde que versões modificadas — inclusive as oferecidas como serviço pela rede — também sejam disponibilizadas sob a AGPL-3.0, com o código-fonte correspondente.
+
+Para uso sob outros termos (por exemplo, integrar a um produto fechado sem as obrigações da AGPL), entre em contato para uma licença comercial.
