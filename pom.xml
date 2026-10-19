@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>br.com.tribunasicura</groupId>
     <artifactId>tribuna-sicura</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -67,7 +67,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <configuration>
-                    <mainClass>MainKt</mainClass>
+                    <mainClass>br.com.tribunasicura.MainKt</mainClass>
                 </configuration>
             </plugin>
         </plugins>

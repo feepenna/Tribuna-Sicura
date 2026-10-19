@@ -26,6 +26,6 @@ O Tribuna §icura gerencia documentos jurídicos altamente sensíveis e requer i
 
 ## Impact
 
-- Código afetado: pacote `org.example.domain` (modelos, portas e casos de uso).
+- Código afetado: pacote `br.com.tribunasicura.domain` (modelos, portas e casos de uso).
 - APIs: portas de repositório exigirão `TenantContext` ou `organizationId` obrigatório em todas as operações de consulta e persistência.
 - Dependências: apenas biblioteca padrão Kotlin e JUnit 5 já existentes no `pom.xml`. Sem dependências externas adicionais.

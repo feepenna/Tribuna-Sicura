@@ -6,7 +6,7 @@ context: |
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
   Product: Tribuna §icura — secure legal document platform (see docs/product-overview.md).
   Domain model: docs/domain-model.md. Agent rules and security requirements: AGENTS.md.
-  Stack: Kotlin on JVM, Maven (use ./mvnw), JUnit 5. Domain code in package org.example.domain.
+  Stack: Kotlin on JVM, Maven (use ./mvnw), JUnit 5. Domain code in package br.com.tribunasicura.domain.
 
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.

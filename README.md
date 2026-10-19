@@ -51,8 +51,8 @@ O escopo completo do MVP e o que fica fora dele estão em [docs/product-overview
 ├── .github/workflows/        # CI (verificação do CLA)
 ├── .opencode/                # comandos e skills do fluxo OpenSpec (opsx-*)
 └── src/
-    ├── main/kotlin/org/example/domain/   # model, port, usecase
-    └── test/kotlin/org/example/domain/   # testes, fakes e contract tests
+    ├── main/kotlin/br/com/tribunasicura/domain/   # model, port, usecase
+    └── test/kotlin/br/com/tribunasicura/domain/   # testes, fakes e contract tests
 ```
 
 ## Como o trabalho é organizado
